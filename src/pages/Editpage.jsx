@@ -133,32 +133,32 @@ const Editpage = () => {
     if (tasks) {
       const currentTask = tasks.find((item) => item.id === Number(id));
 
-      if (currentTask) {
-        setTaskTitle(currentTask.title);
-        setTaskDescription(currentTask.description);
-        setTaskStatus(currentTask.task_status);
-        setTaskTags(currentTask.tags);
-        setSubTasks(currentTask.subTasks);
+      // if (currentTask) {
+      //   setTaskTitle(currentTask.title);
+      //   setTaskDescription(currentTask.description);
+      //   setTaskStatus(currentTask.task_status);
+      //   setTaskTags(currentTask.tags);
+      //   setSubTasks(currentTask.subTasks);
 
-        let data = currentTask.subTasks
-          .filter((item) => {
-            return item.status && item.subTaskTitle;
-          })
-          .map((item) => item.subTaskTitle);
+      //   let data = currentTask.subTasks
+      //     .filter((item) => {
+      //       return item.status && item.subTaskTitle;
+      //     })
+      //     .map((item) => item.subTaskTitle);
 
-        setCheckBox(data);
-      }
+      //   setCheckBox(data);
+      // }
     }
   }, [id, tasks]);
 
   return (
-    <Box width="100%" paddingTop="3rem" color="#DC143C" bg={"#366c89"}>
+    <Box width="100%" paddingTop="1rem" color="white" bg={"#3656c89"}>
       <Flex justifyContent="space-around">
         {/* Task title */}
         <Flex
-          width="420px"
+          width="220px"
           padding="3px 15px 0 3px"
-          height="125vh"
+          height="95vh"
           direction="column"
           justifyContent="space-between"
           overflow="auto"
@@ -251,7 +251,7 @@ const Editpage = () => {
         </Flex>
 
         {/* Sub tasks */}
-        <Box
+        {/* <Box
           border="1px solid rgba(0,0,0,0.1)"
           borderRadius="5px"
           padding="0.25rem"
@@ -298,7 +298,7 @@ const Editpage = () => {
                 ))}
             </CheckboxGroup>
           </Flex>
-        </Box>
+        </Box> */}
 
         {/* Create new task */}
         <Box

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { getTagsList } from "../Redux/AppReducer/action";
-import Profile from "./Profile";
+// import Profile from "./Profile";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -53,7 +53,7 @@ const Sidebar = () => {
       <Flex direction="column" height="inherit">
         <Box height="25%" border="1px solid rgba(0,0,0,0.1)" borderRadius="5px">
           {/* userprofile */}
-          <Profile />
+          {/* <Profile /> */}
         </Box>
         <Flex justify="center" margin="0.25rem 0">
           <Button color="navy" width="100%">
@@ -104,10 +104,10 @@ const Sidebar = () => {
                     <Flex padding="0 10px">
                       <Text>{tagObj.tag}</Text>
                       <Text marginLeft="auto">
-                        {
+                        {/* {
                           tasks.filter((item) => item.tags.includes(tagObj.tag))
                             .length
-                        }
+                        } */}
                       </Text>
                     </Flex>
                   </Box>
