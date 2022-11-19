@@ -53,15 +53,11 @@ const Sidebar = () => {
       borderRadius="5px"
     >
       <Flex direction="column" height="inherit">
-        <Box height="70%" border="1px solid rgba(0,0,0,0.1)" borderRadius="5px" bg={"#FFFFFF"}>
+        <Box height="120px" border="1px solid rgba(0,0,0,0.1)" borderRadius="5px" bg={"#FFFFFF"}>
           {/* userprofile */}
           <Profile />
         </Box>
-        <Flex justify="center" margin="0.25rem 0">
-          <Button color="navy" width="100%">
-            New Task
-          </Button>
-        </Flex>
+      
         <Box minHeight="70%" overflow="auto">
           <Flex direction="column" gap="5px">
             <Box

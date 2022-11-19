@@ -7,6 +7,9 @@ import { getTasks } from "../Redux/AppReducer/action";
 import {Avatar,HStack,Link,IconButton,Button,Menu,MenuButton,MenuList,MenuItem,MenuDivider,useDisclosure,useColorModeValue} from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
+import CreateTask from "../Components/models/CreateTask";
+
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -92,12 +95,14 @@ const Homepage = () => {
           <Flex alignItems={'center'}>
             <Button
               variant={'solid'}
+              onClick={onOpen}
               colorScheme={'teal'}
               size={'sm'}
               mr={4}
               leftIcon={<AddIcon />}>
-              Action
+               Create New Task
             </Button>
+            <CreateTask isOpen={isOpen} onClose={onClose} />
             <Menu>
               <MenuButton
                 as={Button}
