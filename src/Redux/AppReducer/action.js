@@ -91,7 +91,7 @@ const deleteSubTask = (id, payload) => (dispatch) => {
 const createTask = (payload) => (dispatch) => {
   dispatch({ type: types.CREATE_TASKS_REQUEST });
   return axios
-    .post("http://localhost:5000/api/posts/tasks", payload)
+    .post("http://localhost:5000/api/posts/", payload)
     .then((r) => {
       dispatch({ type: types.CREATE_TASKS_SUCCESS, payload: r });
     })

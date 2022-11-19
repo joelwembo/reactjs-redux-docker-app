@@ -4,8 +4,9 @@ import * as types from "./actionTypes";
 const register = (payload) => (dispatch) => {
   dispatch({ type: types.REGISTER_REQUEST });
   return axios
-    .post("https://masai-api-mocker.herokuapp.com/auth/register", payload)
+    .post("http://localhost:5000/api/auth/register", payload)
     .then((r) => {
+      console.log(r)
       dispatch({ type: types.REGISTER_SUCCESS, payload: r.data });
     })
     .catch((e) => dispatch({ type: types.REGISTER_FAILURE, payload: e }));
@@ -28,7 +29,7 @@ const profile = (payload) => (dispatch) => {
   dispatch({ type: types.PROFILE_REQUEST });
   const options = {
     method: "GET",
-    url: `https://masai-api-mocker.herokuapp.com/user/${payload.username}`,
+    url: `http://localhost:5000/api/auth/user/${payload.username}`,
     headers: { Authorization: `Bearer ${payload.token}` },
   };
 

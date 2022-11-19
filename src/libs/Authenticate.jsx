@@ -78,9 +78,10 @@ export const checkSignupForm = ({
   email,
   password,
   mobile,
+  description
 }) => {
   console.log(name, username, email, password, mobile);
-  if (!name || !username || !email || !password || !mobile) {
+  if (!name || !username || !email || !password || !mobile || !description) {
     return { status: false, message: "Please fill all the details" };
   } else {
     return { status: true };

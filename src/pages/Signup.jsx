@@ -36,9 +36,8 @@ const initialState = {
   name: "",
   email: "",
   password: "",
-  passwordConfirm: "",
   username: "",
-  mobile: 1254567891,
+  mobile: 0,
   description: "",
 };
 
@@ -52,8 +51,6 @@ const reducer = (state, action) => {
       return { ...state, email: action.payload };
     case "password":
       return { ...state, password: action.payload };
-    case "passwordConfirm":
-      return { ...state, passwordConfirm: action.payload };
     case "username":
       return { ...state, username: action.payload };
     case "mobile":
@@ -183,23 +180,7 @@ const Signup = () => {
               </InputGroup>
             </FormControl>
 
-            <FormControl id="passwordConfirm">
-              <FormLabel>password Confirm</FormLabel>
-              <InputGroup>
-                <Input
-                  type={eye ? "text" : "password"}
-                  value="Fabri#!e@123"
-                  onChange={(e) =>
-                    setState({  payload: e.target.value })
-                  }
-                />
-                <InputRightElement h={"full"}>
-                  <Button variant={"ghost"} onClick={handleEye}>
-                    <ViewIcon />
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-            </FormControl>
+         
             <Box>
               <FormControl id="mobile" isRequired>
                 <FormLabel>Mobile</FormLabel>
