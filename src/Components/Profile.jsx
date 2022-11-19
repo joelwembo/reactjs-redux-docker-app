@@ -22,14 +22,11 @@ const Profile = () => {
   }, [dispatch, profileData?.length]);
   return (
     <Box>
-      <Flex direction="row" padding="0.5rem">
+      <Flex direction="row" padding="1.5rem">
         <Box width="30%">
           <Avatar
             name={profileData.length !== 0 ? profileData.name : "joel"}
-            src={
-              profileData.length !== 0
-                ? profileData.description
-                : "https://img.icons8.com/fluency/2x/microsoft-todo-2019.png"
+            src={"https://avatars.githubusercontent.com/u/19718580?s=400&u=5590595413f275e0ee8ba25bda9e330b750492c3&v=4"
             }
           />
         </Box>

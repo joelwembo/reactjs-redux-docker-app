@@ -43,7 +43,7 @@ const Login = () => {
         px={6}
         color={"black"}
         borderRadius={"2rem"}
-        bg={"00000"}
+        bg={"#FFFFFF"}
       >
         <Stack align={"center"}>
           <Heading fontSize={"4xl"}>Login in </Heading>

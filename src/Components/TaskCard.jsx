@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getTasks, updateSubtasksList } from "../Redux/AppReducer/action";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TaskCard = ({ id, title, description, tags, subTasks, colorScheme }) => {
   const dispatch = useDispatch();

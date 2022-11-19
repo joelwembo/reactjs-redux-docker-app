@@ -4,7 +4,7 @@ import MainRoutes from "./pages/Routes";
 
 function App() {
   return (
-    <Container minWidth="8xl" bg={"#F8F8FF"}  >
+    <Container minWidth="100%" bg={"#FFFFFF"}  >
       <MainRoutes />
     </Container>
   );

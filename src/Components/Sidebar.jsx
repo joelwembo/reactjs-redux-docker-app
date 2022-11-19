@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { getTagsList } from "../Redux/AppReducer/action";
-// import Profile from "./Profile";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Profile from "./Profile";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -43,7 +45,7 @@ const Sidebar = () => {
 
   return (
     <Box
-      border="1px solid rgba(255,255,255,1)"
+      border="15px solid rgba(255,255,255,1)"
       width="150px"
       height="95vh"
       marginTop="1rem"
@@ -51,9 +53,9 @@ const Sidebar = () => {
       borderRadius="5px"
     >
       <Flex direction="column" height="inherit">
-        <Box height="25%" border="1px solid rgba(0,0,0,0.1)" borderRadius="5px">
+        <Box height="70%" border="1px solid rgba(0,0,0,0.1)" borderRadius="5px" bg={"#FFFFFF"}>
           {/* userprofile */}
-          {/* <Profile /> */}
+          <Profile />
         </Box>
         <Flex justify="center" margin="0.25rem 0">
           <Button color="navy" width="100%">
@@ -116,6 +118,17 @@ const Sidebar = () => {
           </Flex>
         </Box>
         <Box height="10vh">
+
+
+
+         <Button color="navy" width="100%" top="-15px" onClick={logoutHandler}>
+            Chat
+          </Button>
+         
+         <Button color="navy" width="100%" top="-10px" onClick={logoutHandler}>
+            HELP
+          </Button>
+        
           <Button color="navy" width="100%" onClick={logoutHandler}>
             LOGOUT
           </Button>
