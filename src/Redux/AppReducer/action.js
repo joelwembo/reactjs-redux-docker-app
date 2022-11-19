@@ -4,7 +4,7 @@ import * as types from "./actionTypes";
 const getTasks = () => (dispatch) => {
   dispatch({ type: types.GET_TASKS_REQUEST });
   return axios
-    .get("http://localhost:5000/api/posts")
+    .get("http://localhost:5000/api/tasks")
     .then((r) => {
       dispatch({ type: types.GET_TASKS_SUCCESS, payload: r.data });
     })
@@ -45,7 +45,7 @@ const updateTasks = (id, payload) => (dispatch) => {
   dispatch({ type: types.UPDATE_TASK_REQUEST });
 
   return axios
-    .patch(`http://localhost:5000/api/posts/${id}`, payload)
+    .patch(`http://localhost:5000/api/tasks/${id}`, payload)
     .then((r) => {
       dispatch({ type: types.UPDATE_TASK_SUCCESS, payload: r.data });
       return types.UPDATE_TASK_SUCCESS;
@@ -68,7 +68,7 @@ const addSubTasks = (id, payload) => (dispatch) => {
   dispatch({ type: types.ADD_SUBTASKS_REQUEST });
 
   return axios
-    .patch(`http://localhost:5000/api/posts/${id}`, payload)
+    .patch(`http://localhost:5000/api/tasks/${id}`, payload)
     .then((r) => {
       dispatch({ type: types.ADD_SUBTASKS_SUCCESS, payload: r });
     })
@@ -81,7 +81,7 @@ const deleteSubTask = (id, payload) => (dispatch) => {
   dispatch({ type: types.DELETE_SUBTASKS_REQUEST });
 
   return axios
-    .patch(`http://localhost:5000/api/posts/${id}`, payload)
+    .patch(`http://localhost:5000/api/tasks/${id}`, payload)
     .then((r) => dispatch({ type: types.DELETE_SUBTASKS_SUCCESS, payload: r }))
     .catch((e) =>
       dispatch({ type: types.DELETE_SUBTASKS_FAILURE, payload: e })
@@ -91,7 +91,7 @@ const deleteSubTask = (id, payload) => (dispatch) => {
 const createTask = (payload) => (dispatch) => {
   dispatch({ type: types.CREATE_TASKS_REQUEST });
   return axios
-    .post("http://localhost:5000/api/posts/", payload)
+    .post("http://localhost:5000/api/tasks/", payload)
     .then((r) => {
       dispatch({ type: types.CREATE_TASKS_SUCCESS, payload: r });
     })

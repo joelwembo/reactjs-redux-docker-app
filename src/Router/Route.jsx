@@ -5,7 +5,7 @@ import { Navigate, useLocation } from "react-router-dom";
 const PrivateRoute = ({ children }) => {
   const location = useLocation();
   const auth = useSelector((store) => store.AuthReducer.isAuth);
-  console.log("kaho", auth);
+  console.log("application running state", auth);
   if (!auth) {
     return <Navigate to="/login" replace state={{ from: location }} />;
   }
