@@ -1,28 +1,12 @@
-import { ReactNode } from 'react';
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import TaskCard from "../Components/TaskCard";
 import { getTasks } from "../Redux/AppReducer/action";
-import {
-  Avatar,
-  HStack,
-  Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-} from '@chakra-ui/react';
+import {Avatar,HStack,Link,IconButton,Button,Menu,MenuButton,MenuList,MenuItem,MenuDivider,useDisclosure,useColorModeValue} from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-import { Button as Tucc } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -77,6 +61,7 @@ const Homepage = () => {
   return (
     
     <Box width="100%" paddingTop="1rem" bg={"#FFFFFF"} color="black">
+      
 
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}  bg={"#FFFFF"}>
           <IconButton
@@ -137,10 +122,13 @@ const Homepage = () => {
           </Flex>
         </Flex>
 
-
-        
       <Flex justifyContent="space-around">
+
+
         {/* Todo */}
+
+
+
         <Box
           border="1px solid rgba(255,255,255,1)"
           borderRadius="5px"
@@ -152,7 +140,7 @@ const Homepage = () => {
         >
           <Box bg={"#0791E5"} position="sticky" top="0" zIndex="1">
             <Text textAlign="center" fontWeight="bold">
-              TODO
+              CURRENT TASKS
             </Text>
           </Box>
           {/* todo tasks */}
@@ -164,6 +152,11 @@ const Homepage = () => {
                 return <TaskCard key={item.id} {...item} colorScheme="green" />;
               })}
         </Box>
+
+        {/* Todo Sections End Here */}
+
+
+
 
         {/* in-progress */}
 

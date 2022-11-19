@@ -25,9 +25,8 @@ const Profile = () => {
       <Flex direction="row" padding="1.5rem">
         <Box width="30%">
           <Avatar
-            name={profileData.length !== 0 ? profileData.name : "joel"}
-            src={"https://avatars.githubusercontent.com/u/19718580?s=400&u=5590595413f275e0ee8ba25bda9e330b750492c3&v=4"
-            }
+            // name={profileData.length !== 0 ? profileData.name : "joel"}
+            src={"https://avatars.githubusercontent.com/u/19718580?s=400&u=5590595413f275e0ee8ba25bda9e330b750492c3&v=4"}
           />
         </Box>
         <Flex direction="column" width="70%">
