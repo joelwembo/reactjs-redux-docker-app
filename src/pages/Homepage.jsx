@@ -36,7 +36,7 @@ const Homepage = () => {
   }, [dispatch, tasks.length]);
 
   return (
-    <Box width="100%" paddingTop="1rem" bg={"#436c89"}>
+    <Box width="100%" paddingTop="1rem" bg={"#FFFFFF"} color="black">
       <Flex justifyContent="space-around">
         {/* Todo */}
         <Box
@@ -45,7 +45,7 @@ const Homepage = () => {
           width="32%"
           height="95vh"
           overflow="auto"
-          color="whitesmoke"
+          color="black"
         >
           <Box bgImage="linear-gradient(#56ab2f,#a8e063)" position="sticky" top="0" zIndex="1">
             <Text textAlign="center" fontWeight="bold">
@@ -70,7 +70,7 @@ const Homepage = () => {
           borderRadius="5px"
           height="95vh"
           overflow="auto"
-          color="whitesmoke"
+          color="black"
         >
           <Box
             backgroundColor="yellow.700"
@@ -102,7 +102,7 @@ const Homepage = () => {
           height="95vh"
           borderRadius="5px"
           overflow="auto"
-          color="whitesmoke"
+          color="black"
         >
           <Box bgImage="linear-gradient(#606c88,#004e92)" position="sticky" top="0" zIndex="1">
             <Text textAlign="center" fontWeight="bold">
@@ -115,7 +115,7 @@ const Homepage = () => {
               .filter((item) => item.task_status === "done")
               .filter(filterByParamTags)
               .map((item) => {
-                return <TaskCard key={item.id} {...item} colorScheme="blue" />;
+                return <TaskCard key={item.id} {...item} colorScheme="blue" />; 
               })}
         </Box>
       </Flex>

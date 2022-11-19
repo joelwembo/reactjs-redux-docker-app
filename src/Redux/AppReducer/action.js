@@ -57,7 +57,7 @@ const addTag = (tag) => (dispatch) => {
   dispatch({ type: types.ADD_TAG_REQUEST });
 
   return axios
-    .post("./data.json", { tag })
+    .post("http://localhost:5000/api/tags", { tag })
     .then((r) => {
       dispatch({ type: types.ADD_TAG_SUCCESS, payload: r.data });
     })

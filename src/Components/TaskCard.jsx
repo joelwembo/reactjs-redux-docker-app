@@ -15,35 +15,35 @@ import { getTasks, updateSubtasksList } from "../Redux/AppReducer/action";
 
 const TaskCard = ({ id, title, description, tags, subTasks, colorScheme }) => {
   const dispatch = useDispatch();
-  // const [checkbox, setCheckBox] = useState(() => {
-  //   let data = subTasks
-  //     .filter((item) => {
-  //       return item.status && item.subTaskTitle;
-  //     })
-  //     .map((item) => item.subTaskTitle);
-  //   return data;
-  // });
+  const [checkbox, setCheckBox] = useState(() => {
+    let data = subTasks
+      .filter((item) => {
+        return item.status && item.subTaskTitle;
+      })
+      .map((item) => item.subTaskTitle);
+    return data;
+  });
 
-  // const updateSubTaskStatus = (value) => {
-  //   let newSubTaskData = subTasks.map((item) => {
-  //     if (value.includes(item.subTaskTitle)) {
-  //       return {
-  //         ...item,
-  //         status: true,
-  //       };
-  //     }
-  //     return { ...item, status: false };
-  //   });
+  const updateSubTaskStatus = (value) => {
+    let newSubTaskData = subTasks.map((item) => {
+      if (value.includes(item.subTaskTitle)) {
+        return {
+          ...item,
+          status: true,
+        };
+      }
+      return { ...item, status: false };
+    });
 
-  //   dispatch(updateSubtasksList(id, { subTasks: newSubTaskData })).then(() =>
-  //     dispatch(getTasks())
-  //   );
-  // };
+    dispatch(updateSubtasksList(id, { subTasks: newSubTaskData })).then(() =>
+      dispatch(getTasks())
+    );
+  };
 
   return (
     <Box
       width="100%"
-      boxShadow="0px 10px 15px -3px rgba(0,0,0,0.1)"
+      boxShadow="0px 5px 5px -3px rgba(0,0,0,0.1)"
       padding="10px"
     >
       <Flex justifyContent="space-between">
@@ -52,7 +52,7 @@ const TaskCard = ({ id, title, description, tags, subTasks, colorScheme }) => {
           <EditIcon />
         </Link>
       </Flex>
-      {/* <Box>
+      <Box>
         <Stack direction="row">
           {tags.length &&
             tags.map((item, index) => {
@@ -63,9 +63,9 @@ const TaskCard = ({ id, title, description, tags, subTasks, colorScheme }) => {
               );
             })}
         </Stack>
-      </Box> */}
+      </Box>
       <Text>{description}</Text>
-      {/* <Box>
+      <Box>
         <CheckboxGroup
           value={checkbox}
           onChange={(value) => {
@@ -80,7 +80,7 @@ const TaskCard = ({ id, title, description, tags, subTasks, colorScheme }) => {
               </Checkbox>
             ))}
         </CheckboxGroup>
-      </Box> */}
+      </Box>
     </Box>
   );
 };
