@@ -47,11 +47,9 @@ const TaskCard = ({ id, title, description, tags, task_status, subTasks, colorSc
 
   return (
     <Box
-    
       width="100%"
       boxShadow="2px 5px 5px -3px rgba(0,0,0,0.1)"
-      padding="10px"
-    >
+      padding="10px">
       <Box
         justifyContent="space-between"
         maxW={'100%'}
@@ -144,8 +142,7 @@ const TaskCard = ({ id, title, description, tags, task_status, subTasks, colorSc
             }}>
             Edit
           </Button>
-          <Button
-           
+          <Button 
             flex={1}
             fontSize={'sm'}
             rounded={'full'}

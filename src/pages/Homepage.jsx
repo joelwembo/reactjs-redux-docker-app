@@ -128,12 +128,7 @@ const Homepage = () => {
         </Flex>
 
       <Flex justifyContent="space-around">
-
-
         {/* Todo */}
-
-
-
         <Box
           border="1px solid rgba(255,255,255,1)"
           borderRadius="5px"
@@ -143,7 +138,7 @@ const Homepage = () => {
           overflow="auto"
           color="black"
         >
-          <Box bg={"#0791E5"} position="sticky" top="0" zIndex="1">
+          <Box bg={"#44D908"} position="sticky" top="0" zIndex="1">
             <Text textAlign="center" fontWeight="bold">
               CURRENT TASKS
             </Text>
@@ -160,9 +155,6 @@ const Homepage = () => {
 
         {/* Todo Sections End Here */}
 
-
-
-
         {/* in-progress */}
 
         <Box
@@ -175,7 +167,7 @@ const Homepage = () => {
           color="black"
         >
           <Box
-            backgroundColor="yellow.100"
+            bg={"#44D908"}
             position="sticky"
             top="0"
             zIndex="1"
