@@ -7,7 +7,6 @@ RUN npm install --legacy-peer-deps
 # COPY default.conf /etc/nginx/conf.d/default.conf
 COPY . .
 
-# RUN npm test - if you want to test before to build
 RUN npm run build
 
 FROM nginx:alpine AS prod2
